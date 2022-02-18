@@ -12,7 +12,7 @@ muest_porbit    =5
 [filtrotrans,senalBPSK,t,senalding] =   BPSK_pb(num_bits,srate,filt,muest_porbit)
 
 %%  Canal con Ruido Aditivo
-%   Se toma la señaly se le suma un ruido con potencia tal que se tiene una relacion 
+
 %   señal a ruido especificada
 
 SNR_deseado_dB  =4;

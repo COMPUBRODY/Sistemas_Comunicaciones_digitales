@@ -41,8 +41,8 @@ senalBPSK   =   convrec(senaldiscretal,filtrotrans);
 %---Se grafican los resultados
 figure;
 subplot(2,1,1), plot(t,senalBPSK);
-axis([-7*srate*muest_porbit 7*srate*muest_porbit-1.1 1.1]);
-xlabel('Señal   BPSK generada en tiempo');
+axis([-7*srate*muest_porbit  7*srate*muest_porbit-1.1    1.1])
+xlabel('Señal BPSK generada en tiempo');
 hold on;
 subplot(2,1,2), stem(t,senaldiscretal, 'r');
 hold off;
