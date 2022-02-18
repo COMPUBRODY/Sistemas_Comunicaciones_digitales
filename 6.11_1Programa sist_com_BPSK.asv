@@ -1,0 +1,14 @@
+%%  Esta rutina Genera la simulacion de un sistema de comunicaciones BPSK
+
+%%  Transmisor
+%   Se genera una señal BPSK con los siguientes Datos
+%   - señalBPSK =   BPSK_pb(num_bits,srate, filt, muest_porbit);
+clear all; close all;
+num_bits    =10 000 %Numero bits a transmitir
+strate      =.01    
+filt             
+
+%%  Canal con Ruido Aditivo
+%%  Receptor con Filtro Acoplado
+%%  Dispositivo de Decision
+%%  Graficacion BER teorico y Simulado
