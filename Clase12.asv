@@ -1,0 +1,7 @@
+[sen,Fs]    =   audioread['fire_fire.wav'];
+sen(1:2000) = 0;    %Limpiar el transitorio
+sound[sen,8000];
+sen = interp(1:65881);
+sound[sen_int,64000];
+tiempo = -.5:1/64000:.5;
+frecuencia = -3200

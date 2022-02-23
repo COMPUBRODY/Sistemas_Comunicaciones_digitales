@@ -4,6 +4,8 @@ lenf=length(frec);
 x=zeros(1,lenf);
 x(101:301)=1;
 plot(frec,x);
+%% Part 2
+x = int32(x);
 y=real(ftot(x));
 ventanahamm=zeros(1,lenf);
 ventanahamm(191:211)=hamming(21); %Ventana Hamming de 21 coeficientes
@@ -13,7 +15,7 @@ hold on;
 plot(frec,real(ttof(filtro)), 'r');
 hold off;
 
-%%  Comportamiento con Señal de Voz y suma de sonoidal
+%%  Comportamiento con Señal de Voz y suma de senoidal
 
 %vector=wavread('prueba.wav');
 %info=audioinfo('prueba.wav');
