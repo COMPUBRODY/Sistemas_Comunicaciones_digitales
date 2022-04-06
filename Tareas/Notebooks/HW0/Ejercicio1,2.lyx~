@@ -1,0 +1,243 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+1.
+ Precise cual es la relación entre las series de Fourier (SF), la Transformada
+ de Fourier (TF), la transformada de Fourier de tiempo discreto (TFTD) y
+ la transformada discreta de Fourier (TDF).
+ (No debe tener más de una página).
+ 
+\end_layout
+
+\begin_layout Enumerate
+Series de Fourier
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $x(t)=\sum_{k=-\infty}^{\infty}c_{k}e^{jk\omega_{0}t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $c_{k}=\frac{1}{T_{0}}\int_{T}x(t)e^{-jk\omega_{0}t}dt$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Transformada de Fourier
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $F(\omega)=\int_{-\infty}^{\infty}x(t)e^{-j\omega t}dt$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $X(t)=X^{-1}(\omega)=\frac{1}{2\pi}\int_{-\infty}^{\infty}F(\omega)e^{j\omega t}d\omega$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Las series de fourier son para señales periodicas y la transformada de fourier
+ puede ser aplicada a una señal aperodica, este limitando un tiempo de observaci
+ón y dando por hecho que esa ventana observable sea tomada como un periodo.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Transformada de Fourier de tiempo discreto
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Es la transformada para una señal discreta, tiene relación con la transformada
+ z, la transformada de tiempo discreto vive en el circulo unitario de la
+ z transform.
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $X(\omega)=\sum x[n]e^{-j\omega n}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Transformada discreta de Fourier
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+La DFT requiere que la función de entrada sea una secuencia discreta y de
+ duración finita.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Es una transformada de Fourier para análisis de señales de tiempo discreto
+ y dominio finito
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $X_{k}=\sum x_{n}e^{-j\frac{2\pi}{N}kn}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+2.
+ Seleccione dos funciones temporales (no senoidales) y obtenga su TF mediante
+ su cálculo directo (analítico) y compruebe su aproximación mediante la
+ TDF correctamente escalada (Revise libros de DSP para encontrar la relación
+ adecuada).
+\end_layout
+
+\begin_layout Standard
+Pulso cuardrado en el intervalo -1 a 1 para darle simetria.
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $F(\omega)=\int_{-1}^{1}e^{-j\omega t}dt=-\frac{e^{-j\omega t}}{j\omega}=\frac{1}{j\omega}e^{-j\omega t}|_{-1}^{1}=$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $F(\omega)=-\frac{1}{j\omega}[e^{-j\omega}-e^{j\omega}]=\frac{1}{\omega}[\frac{e^{j\omega}-e^{-j\omega}}{j}]=\frac{sin(\omega)}{\omega}=sinc(\omega)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename pasted1.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+TDF
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted2.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La norma de este pulso es 
+\begin_inset Formula $\frac{1}{\sqrt{M}}$
+\end_inset
+
+ este sería el escalamiento segun su longitud.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $X(k)=2\sum_{n=0}^{n=1}xe^{-j\frac{2\pi}{N}kn}$
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
